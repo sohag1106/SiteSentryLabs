@@ -1,0 +1,17 @@
+{
+  "name": "sitesentrylabs-contact-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SiteSentryLabs contact form backend and admin control panel",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "build:dist": "node scripts/build-dist.mjs",
+    "deploy": "npm run build:dist && wrangler pages deploy --project-name sitesentrylabs --branch main --commit-dirty=true"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "express": "^4.21.2"
+  }
+}

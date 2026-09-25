@@ -1,0 +1,195 @@
+/* ==========================================================================
+   SiteSentryLabs — Responsive Overrides
+   Breakpoints: 1440 / 1280 / 1024 / 768 / 480 / 390 / 360
+   ========================================================================== */
+
+/* ---------- ≤1280px : tighten containers, drop to 3-col grids ---------- */
+@media (max-width: 1280px) {
+  .feature-cards,
+  .services-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-visual {
+    height: 400px;
+  }
+}
+
+/* ---------- ≤1024px : tablets — stack major two-column layouts ---------- */
+@media (max-width: 1024px) {
+  :root {
+    --gutter: clamp(20px, 5vw, 48px);
+  }
+
+  .nav-links,
+  .nav-actions .btn-ghost,
+  .nav-actions .nav-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .hero-visual {
+    order: -1;
+    height: 320px;
+  }
+
+  .hero-copy p {
+    max-width: 60ch;
+  }
+
+  .why-layout,
+  .about-intro-grid,
+  .service-detail-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    order: -1;
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 24px;
+  }
+}
+
+/* ---------- ≤768px : tablets portrait / large phones ---------- */
+@media (max-width: 768px) {
+  .feature-cards,
+  .services-grid,
+  .team-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    margin: 0 16px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .contact-form {
+    padding: 28px 22px;
+  }
+}
+
+/* ---------- ≤480px : phones ---------- */
+@media (max-width: 480px) {
+  :root {
+    --gutter: 20px;
+    --header-h: 72px;
+  }
+
+  .hero {
+    padding-top: calc(var(--header-h) + 32px);
+    min-height: unset;
+  }
+
+  .hero-visual {
+    height: 260px;
+  }
+
+  .hero-visual__mark {
+    width: 150px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cta-section__mark {
+    display: none;
+  }
+
+  .mobile-menu a {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
+/* ---------- ≤390px : small phones ---------- */
+@media (max-width: 390px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 0.92rem;
+  }
+
+  .contact-form {
+    padding: 22px 16px;
+  }
+}
+
+/* ---------- Desktop cursor only ---------- */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* ---------- Home additions ---------- */
+@media (max-width: 1024px) {
+  .tech-partners-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .tech-partners-grid { grid-template-columns: 1fr; }
+  .tech-partner-card { min-height: 104px; }
+}

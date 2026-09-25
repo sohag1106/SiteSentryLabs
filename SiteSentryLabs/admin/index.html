@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SiteSentryLabs — Control Panel</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="loginView" class="login-shell">
+    <div class="login-card">
+      <div class="brand-mark"><img src="../assets/icons/sitesentrylabs-icon.png" alt="SiteSentryLabs"></div>
+      <p class="eyebrow">SiteSentryLabs</p>
+      <h1>Admin Control Panel</h1>
+      <p class="muted">Sign in to view and manage contact enquiries.</p>
+      <form id="loginForm">
+        <label>Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Admin password" required>
+        <button class="primary" type="submit">Sign In</button>
+        <div id="loginError" class="error"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="logo"><img src="../assets/icons/sitesentrylabs-icon.png" alt="SiteSentryLabs"><div><strong>SiteSentryLabs</strong><small>Control Panel</small></div></div>
+      <nav>
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#messages">Messages</a>
+      </nav>
+      <div class="side-bottom">
+        <a href="../contact.html" target="_blank">View Contact Page ↗</a>
+        <button id="logoutBtn">Log out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">Overview</p><h1>Contact enquiries</h1></div>
+        <div class="top-actions"><button id="refreshBtn" class="ghost">↻ Refresh</button><button id="exportBtn" class="primary small">Export CSV</button></div>
+      </header>
+
+      <section class="stats">
+        <div class="stat"><span>Total Messages</span><strong id="total">0</strong></div>
+        <div class="stat"><span>New</span><strong id="newCount">0</strong></div>
+        <div class="stat"><span>Read</span><strong id="readCount">0</strong></div>
+        <div class="stat"><span>Today</span><strong id="todayCount">0</strong></div>
+      </section>
+
+      <section class="panel" id="messages">
+        <div class="panel-head">
+          <div><h2>Messages</h2><p class="muted">Every enquiry submitted through your contact form appears here.</p></div>
+          <div class="filters"><input id="search" placeholder="Search name, email, company..." /><select id="statusFilter"><option value="all">All status</option><option value="new">New</option><option value="read">Read</option></select></div>
+        </div>
+        <div id="messageList" class="message-list"></div>
+        <div id="empty" class="empty hidden">No messages found.</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <article class="modal-card">
+      <button id="closeModal" class="modal-close">×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

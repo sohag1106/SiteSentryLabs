@@ -1,0 +1,6 @@
+# Cloudflare Pages project — https://sitesentrylabs.com
+# Static site lives in ./dist (built by scripts/build-dist.sh or manually),
+# Pages Functions (the /api backend) live in ./functions.
+name = "sitesentrylabs"
+compatibility_date = "2026-09-01"
+pages_build_output_dir = "./dist"
