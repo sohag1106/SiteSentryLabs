@@ -44,7 +44,7 @@ const SITESENTRYLABS_TEAM = [
     social: { linkedin: '#LINKEDIN_URL', github: '#GITHUB_URL', instagram: '#INSTAGRAM_URL' }
   },
   {
-    name: 'Advisor Name 03',
+    name: 'Alex Parker',
     role: 'Cybersecurity Advisor',
     category: 'Advisor — Demo Placeholder',
     demo: true,
@@ -73,7 +73,7 @@ const SITESENTRYLABS_TEAM = [
     social: { linkedin: '#LINKEDIN_URL', github: '#GITHUB_URL', instagram: '#INSTAGRAM_URL' }
   },
   {
-    name: 'Team Member Name',
+    name: 'Olivia Carter',
     role: 'UI/UX Designer',
     category: 'Member',
     bio: 'Placeholder bio — add a short summary of this person’s background and focus areas.',
@@ -82,7 +82,7 @@ const SITESENTRYLABS_TEAM = [
     social: { linkedin: '#LINKEDIN_URL', github: '#GITHUB_URL', instagram: '#INSTAGRAM_URL' }
   },
   {
-    name: 'Team Member Name',
+    name: 'James Carter',
     role: 'Cybersecurity Specialist',
     category: 'Member',
     bio: 'Placeholder bio — add a short summary of this person’s background and focus areas.',
